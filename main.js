@@ -1,0 +1,48 @@
+const alhamdulilladhDisplay = document.getElementById("Alhamdulillah-display");
+const subhannAllahDisplay = document.getElementById("SubhanAllah-display");
+let alhamdulillah = 0;
+let subhanAllah = 0;
+document
+  .getElementById("Alhamdulillah-increment")
+  .addEventListener("click", function () {
+    if (alhamdulillah === 33) {
+      return alert("this section fill up try next");
+    }
+    alhamdulillah += 1;
+    alhamdulilladhDisplay.innerText = alhamdulillah;
+  });
+document
+  .getElementById("Alhamdulillah-decrement")
+  .addEventListener("click", function () {
+    if (alhamdulillah <= 0) {
+      return alert("Cant negative");
+    }
+    alhamdulillah -= 1;
+    alhamdulilladhDisplay.innerText = alhamdulillah;
+  });
+document
+  .getElementById("SubhanAllah-increment")
+  .addEventListener("click", function () {
+    if (subhanAllah === 33) {
+      return alert("this section fill up try next");
+    }
+    console.log("subhan");
+    subhanAllah += 1;
+    subhannAllahDisplay.innerText = subhanAllah;
+  });
+document
+  .getElementById("SubhanAllah-decrement")
+  .addEventListener("click", function () {
+    if (subhanAllah <= 0) {
+      return alert("Cant negative");
+    }
+    subhanAllah -= 1;
+    subhannAllahDisplay.innerText = subhanAllah;
+  });
+
+document.getElementById("reset").addEventListener("click", function () {
+  alhamdulillah = 0;
+  subhanAllah = 0;
+  subhannAllahDisplay.innerText = subhanAllah;
+  alhamdulilladhDisplay.innerText = alhamdulillah;
+});
